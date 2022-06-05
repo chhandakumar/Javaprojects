@@ -1,4 +1,4 @@
-package com.chhanda.model;
+package com.chhanda.myfancypdfinvoices.model;
 
 import java.util.UUID;
 

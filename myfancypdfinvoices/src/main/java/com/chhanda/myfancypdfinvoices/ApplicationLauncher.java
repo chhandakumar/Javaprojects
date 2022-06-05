@@ -1,10 +1,10 @@
-package com.chhanda;
+package com.chhanda.myfancypdfinvoices;
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.Wrapper;
 import org.apache.catalina.startup.Tomcat;
 
-import com.chhanda.web.MyFancyPdfInvoicesServlet;
+import com.chhanda.myfancypdfinvoices.web.MyFancyPdfInvoicesServlet;
 
 
 

@@ -1,9 +1,12 @@
-package com.chhanda.service;
+package com.chhanda.myfancypdfinvoices.service;
 
 import java.util.UUID;
 
-import com.chhanda.model.User;
+import org.springframework.stereotype.Component;
 
+import com.chhanda.myfancypdfinvoices.model.User;
+
+@Component
 public class UserService {
 
 	public User findById(String id) {
