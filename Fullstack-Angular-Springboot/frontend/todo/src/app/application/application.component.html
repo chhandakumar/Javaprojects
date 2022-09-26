@@ -1,0 +1,26 @@
+<H1>Application</H1>
+
+<div class="container">
+  <div class="alert alert-warning" *ngIf="applicationForm.dirty && applicationForm.invalid">Enter valid values</div>
+  <div class="alert alert-warning" *ngIf="applicationForm.dirty && targetDate.invalid">Enter valid Target Date</div>
+  <div class="alert alert-warning" *ngIf="applicationForm.dirty && EAI.invalid">Enter atleast 5 characters in EAI</div>
+  
+  <form (ngSubmit)="!applicationForm.invalid && saveApplication()" #applicationForm="ngForm">
+    <fieldset class="form-group">
+      <label>EAI</label>
+      <input type="text" #EAI="ngModel" 
+            [(ngModel)]="application.EAI" class="form-control" 
+                name="EAI" required="required" minlength="5">
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label>Target Date</label>
+        <input type="date" #targetDate="ngModel"
+        [ngModel]="application.targetDate | date:'yyyy-MM-dd' "
+        (ngModelChange)="application.targetDate = $event"
+        class="form-control" name="targetDate" required="required" >
+    </fieldset>
+
+    <button type="submit" class="btn btn-success">Save</button>
+  </form>  
+</div>

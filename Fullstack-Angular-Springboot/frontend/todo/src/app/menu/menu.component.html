@@ -1,0 +1,16 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><a href="https://www.fedex.com" class="navbar-brand">
+            fedex</a></div>
+
+        <ul class="navbar-nav">
+            <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/welcome/fedex" class="nav-link">Home</a></li>
+            <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/applications" class="nav-link">Applications</a></li>
+        </ul>
+
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+                <li><a *ngIf="!hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
+                <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li>
+        </ul>
+    </nav>
+</header>
